@@ -1,67 +1,57 @@
-const { unix } = require("./moment");
+// moment = require("moment");
+// var now = moment();
+var projectFormEl = $("#projectForm");
+var projectEl = $("#project");
+var typeEl = $("#type");
+var dueDate = $("#dueDate");
+var perHour = $("#perHour");
+var userInput = $("#userInput");
+// var submitbuttonEl = $(handleFormSubmit);
+function handleFormSubmit(event) {
+  event.preventDefault();
+  var projectFormEl = $('input[name= "projectForm"]').val();
+  if (!projectFormEl) {
+    console.log("no projects today");
+    return;
+  }
+  projectFormEl.append("<form>" + projectFormObj + "</form>");
+  $('input[name= "projectForm"]').val("");
+  var test3 = $(`<div class="col-md-6">test3</div>`);
+  userInput.append(test3);
+  for (var i = 0; i < totalProjects.length; i++) {}
+}
+userInput.css("border", "2px solid red");
+// userInput.html(`<div class="col-md-6">
+// test
+// </div><div class="col-md-6">test2</div>
+// `);
 
-moment = require("moment");
-
-var project = document.querySelector("project");
-var type = document.querySelector("type");
-var dueDate = document.querySelector("dueDate");
-var perHour = document.querySelector("wage");
-var now = document.querySelector("date-time");
-var timer = document.querySelector("");
-var inputData = document.getElementsByClassName("form-control");
-var submitbuttonEl = document.addEventListener("click", SubmitEvent);
 // sets totalProjects to an array
-var totalProjects = [];
-var projectFormObj ={
-    project: document.querySelector("#project"),
-    type: document.querySelector("#type"),
-    dueDate: document.querySelector("#dueDate"),
-    perHour: document.querySelector("#wage")
-}
-// retrieving the data typed and assigning it to object projectForm
+var projectFormObj = [projectEl, typeEl, dueDate, perHour, now];
 
-function getData(){
-   for (projectFormObj.concat(type,dueDate,perHour,dueDate)
-    type.textContent.concat(projectFormObj)
-    dueDate.getAttribute.toString(projectFormObj);
-    perHour.getAttribute.toString(projectFormObj);
-    projectFormObj.SubmitEvent;
-    projectFormObj = JSON.parse(projectFormObj)
-}
+var totalProjects = [projectFormObj];
+
+// handling submit event on projectForm
+submitbuttonEl.on("submit", handleFormSubmit);
 
 // saving Data returned in the object projectForm to the name in each project
-function setData(){
-    localStorage.setItem("$(project)", projectFormObj)
+function setData() {
+  localStorage.setItem($("#project"), projectFormObj);
 }
 // creating cards based on projectForm
- function renderData(projectFormobj){
+function renderData(projectFormobj) {}
+// function SubmitEvent(createDate){
+//     array.forEach.projectFormObj => {
 
- }
-function SubmitEvent(createDate){
-    array.forEach.projectFormObj => {
-        
-    });
-}
-setTimeout(dueDate){
-    moment.calendarFormat.inputData.dueDate
-}
+//     });
+// // }
+// setTimeout(dueDate){
+//     for (dueDate )
+// }
 //  var setItem;
 //   if (Array.projectFormObj.data)
 //   { setItem}
 //     submitbuttonEl.addEventListener("click")
 //     data.projectFormObj.inputData();
 //     dueDate.appendChild(data);
-//     inputData.dueDate.appendChild();
-    
-
-
-
-
-function createDate(){
-    FormData.apply
-
-        
-    };
-
-
-
+//     inputData.dueDate.appendChild()
