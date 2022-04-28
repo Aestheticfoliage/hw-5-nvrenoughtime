@@ -18,15 +18,16 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/style.css" >
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Work Day Scheduler</title>
     <div class="media">
-        
-          <h5 class="mt-0"></h5>
-          <p><span id='date-time'></span>.</p>
-          <p>Please fill out the required fields to submit job info.</p>
-          <p class="mb-0">If we work together, this should all go as planned......</p>
-      </div>
+      <h5 class="mt-0"></h5>
+      <p><span id="date-time"></span>.</p>
+      <p>Please fill out the required fields to submit job info.</p>
+      <p class="mb-0">
+        If we work together, this should all go as planned......
+      </p>
+    </div>
   </head>
 
   <body>
@@ -34,39 +35,53 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead">
-          <img src="" alt="">
+        <img src="" alt="" />
       </p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <form name = "projectForm" id="projectForm">
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="projectName">What is the name of your project</label>
-            <input type="text" class="form-control" id="project" placeholder="NameofProject">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="typeofProject">what is the type of your project</label>
-            <input type="text" class="form-control" id="type" placeholder="projectType">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="wage">How much per hour is the rate for this project</label>
-          <input type="number" class="form-control" id="perHour" placeholder="hourlyWage">
-        </div>
-        <div class="form-group">
-          <label for="dueDate">Project Due Date</label>
-          <input type="time" class="form-control" id="dueDate" placeholder="calendar">
-        </div>
-        <div class="submit" id = "inputData">
-            <input class="btn btn-primary" type="submit" value="Submit">
-        </div><div><span class=""></span></div>
-      </form>
-      <section class="row" id="userInput">
-      </section>
-
-        <script src="assets/moment.js"></script>
+      <div class="row time-block">
+        <label class="col-md-2">TIME</label>
+        <label class="col-md-4">Work Description</label>
+        <label class="col-md-2">Hourly Wage</label>
+        <label class="col-md-2">Project Date</label>
+        <label class="col-md-2">SAVE</label>
+      </div>
+      <div class="row time-block" id="9">
+        <label class="hour col-md-2">9:00 AM</label>
+        <textarea class="description col-md-4"></textarea>
+        <input type="number" class="wage col-md-2" />
+        <input type="date" class="project-date col-md-2" />
+        <button class="saveBtn col-md-2">Save</button>
+      </div>
+      <div class="row time-block" id="10">
+        <label class="hour col-md-2">10:00 AM</label>
+        <textarea class="description col-md-8"></textarea>
+        <button class="saveBtn col-md-2">Save</button>
+      </div>
+      <div class="row time-block" id="11">
+        <label class="hour col-md-2">11:00 AM</label>
+        <textarea class="description col-md-8"></textarea>
+        <button class="saveBtn col-md-2">Save</button>
+      </div>
+      <div class="row time-block" id="12">
+        <label class="hour col-md-2">12:00 PM</label>
+        <textarea class="description col-md-8"></textarea>
+        <button class="saveBtn col-md-2">Save</button>
+      </div>
+      <div class="row time-block" id="13">
+        <label class="hour col-md-2">1:00 PM</label>
+        <textarea class="description col-md-8"></textarea>
+        <button class="saveBtn col-md-2">Save</button>
+      </div>
+      <div class="row time-block" id="14">
+        <label class="hour col-md-2">02:00 PM</label>
+        <textarea class="description col-md-8"></textarea>
+        <button class="saveBtn col-md-2">Save</button>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>
